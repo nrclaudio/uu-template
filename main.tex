@@ -1,0 +1,134 @@
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfiles}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage[left = 2.5cm, right = 2.5cm, top = 3cm, bottom = 3cm]{geometry}
+\usepackage{titlesec}
+\usepackage{afterpage}
+\usepackage{xcolor}
+
+\newcommand\blankpage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{+1}
+    \newpage
+    }
+
+%%%%%X-heading 1 main part%%%%%%
+
+% To add the corresponding header in LaTeX simply add 
+% \section{nameofyoursection}
+
+\titlespacing*{\section}{0pt}{36pt}{12pt}
+\titleformat*{\section}{\fontsize{18}{20}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%X-heading 2%%%%%%%%%%%
+
+% To add the corresponding header in LaTeX simply add 
+% \subsection{nameofyoursubsection}
+
+\titlespacing*{\subsection}{0pt}{18pt}{12pt}
+\titleformat*{\subsection}{\fontsize{14}{16}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%X-heading 3%%%%%%%%%%%
+
+% To add the corresponding header in LaTeX simply add 
+% \subsubsection{nameofyoursubsection}
+
+\titlespacing*{\subsubsection}{0pt}{10pt}{0pt}
+\titleformat*{\subsubsection}{\fontsize{12}{14}\selectfont\bfseries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\setlength{\baselineskip}{1.15cm}
+\setlength{\parskip}{12pt}
+
+
+
+%Set graphics path
+\graphicspath{{Figures/}{../Figures/}}
+
+
+
+\begin{document}
+\setlength\parindent{0pt}
+\noindent
+
+%Start of document
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+
+
+\thispagestyle{empty}
+\subfile{Sections/Abstract.tex}
+\afterpage{\blankpage}
+\newpage
+
+
+
+\addcontentsline{toc}{section}{Popular Science Summary}
+\thispagestyle{empty}
+\subfile{Sections/PopularScience.tex}
+\afterpage{\blankpage}
+\newpage
+
+
+\tableofcontents
+\thispagestyle{empty}
+\afterpage{\blankpage}
+\newpage
+
+
+\section*{Abbreviations}
+\thispagestyle{empty}
+\subfile{Sections/Abbreviations.tex}
+\afterpage{\blankpage}
+\newpage
+
+
+\section{Introduction}
+\subfile{Sections/Introduction.tex}
+\clearpage{\pagestyle{empty}\cleardoublepage} %Clears page header/footer if empty page.
+
+
+\section{Materials and Methods}
+\subfile{Sections/MaterialsAndMethods.tex}
+\clearpage{\pagestyle{empty}\cleardoublepage} %Clears page header/footer if empty page.
+
+
+\section{Discussion}
+\subfile{Sections/Discussion.tex}
+\clearpage{\pagestyle{empty}\cleardoublepage} %Clears page header/footer if empty page.
+
+\section{Conclusions}
+\subfile{Sections/Conclusions.tex}
+\clearpage{\pagestyle{empty}\cleardoublepage} %Clears page header/footer if empty page.
+
+\section{Acknowledgements}
+\subfile{Sections/Acknowledgements.tex}
+\clearpage{\pagestyle{empty}\cleardoublepage} %Clears page header/footer if empty page.
+
+\section*{References}
+\addcontentsline{toc}{section}{References}
+\thispagestyle{empty}
+\subfile{Sections/References.tex}
+\clearpage{\pagestyle{empty}\cleardoublepage} %Clears page header/footer if empty page.
+
+\section*{Appendix}
+\addcontentsline{toc}{section}{Appendix}
+\thispagestyle{empty}
+\subfile{Sections/Appendix.tex}
+\clearpage{\pagestyle{empty}\cleardoublepage} %Clears page header/footer if empty page.
+
+\end{document}
