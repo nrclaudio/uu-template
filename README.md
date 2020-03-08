@@ -4,6 +4,6 @@ You can take a look at how the template looks now here [here](https://github.com
 
 - Change font of headers to Arial
 - Change general font to TNR
-- Add .bib
+- ~~Add .bib~~
 - Generalize behaviour of images/tables etc...
 - Add instructions on how to use the template
