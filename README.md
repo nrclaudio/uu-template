@@ -1,4 +1,4 @@
-You can take a look at how the template looks now here [here](https://github.com/nrclaudio/uu-template/blob/master/rendered.pdf)
+You can take a look at how the template looks now here [here](https://github.com/nrclaudio/uu-template/blob/master/uu_template.pdf)
 
 ## To-do list:
 
