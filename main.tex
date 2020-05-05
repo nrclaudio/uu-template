@@ -1,3 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Copyright 2020, Claudio Novella Rausell, All rights reserved %
+
+% Open license, but please give credit when appropriate %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
@@ -11,6 +20,12 @@
 \usepackage{cite}
 \usepackage{natbib}
 \usepackage{lipsum}  
+\usepackage{soul}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{gensymb}
+\usepackage{caption}
+
 
 
 
@@ -60,6 +75,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%Figures%%%%%%%%%%%
+
+% To add a figure:
+
+% \begin{figure}[h]
+% \includegraphics[width = 1)\textwidth]{Figures/Fig1.png}
+% this reads as: include this image with a width of 100% of the text width, if it's too big  % of an image you can play around with this parameter
+% \centering
+% \caption{\textit{Wow!}, nice dog}
+% \end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \setlength{\baselineskip}{1.15cm}
@@ -73,6 +101,9 @@
 
 
 \begin{document}
+\captionsetup{labelfont=bf, labelsep = period, font = it}
+
+
 \setlength\parindent{0pt}
 \noindent
 
@@ -102,6 +133,7 @@
 
 
 \section*{Abbreviations}
+\addcontentsline{toc}{section}{Abbreviations}
 \thispagestyle{empty}
 \subfile{Sections/Abbreviations.tex}
 \afterpage{\blankpage}
